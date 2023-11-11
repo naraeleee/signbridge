@@ -48,6 +48,7 @@ def get_random_alphabet():
     choices = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     return random.choice(choices)
 
+
 show_start_message = True
 show_start_message_time = 0
 
@@ -178,9 +179,10 @@ while True:
         if time.time() - next_question_time >= 3:
             text = "Sign " + current_alphabet + "."
         
-        skip_button_pressed = cv2.waitKey(1) & 0xFF == ord('s')
+        key = cv2.waitKey(1) & 0xFF
+        
 
-        if skip_button_pressed:
+        if key == ord('s'):
             skipped.append(current_alphabet)
             current_alphabet = get_random_alphabet()
             total += 1
@@ -189,10 +191,10 @@ while True:
         # cv2.imshow("Webcam", frame)
 
         # Break the loop if the 'q' key is pressed
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        if key == ord('q'):
             correct = total - len(skipped)
             percentage = (correct / total) * 100
-            print("Correctness: " + percentage + "%")
+            print(f"Correctness: {percentage}%")
             print("Skipped Questions: ", skipped)
             break
         
