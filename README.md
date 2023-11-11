@@ -1,4 +1,4 @@
-# signbridge
+# Sign Bridge
 
 ![image](https://github.com/naraeleee/signbridge/assets/113263597/4f034bf7-9824-415a-a6f5-7ba15f779a11)
 
