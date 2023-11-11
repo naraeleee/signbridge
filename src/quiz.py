@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import numpy as np
 
-# 폴더 경로 확인해주세용
+# check folder path
 data_dict = pickle.load(open('./src/data.pickle', 'rb'))
 
 data = np.asarray(data_dict['data'])
@@ -34,7 +34,7 @@ import cv2
 import mediapipe as mp
 import numpy as np
 
-# 폴더 경로 확인해 주세용
+# check folder path
 model_dict = pickle.load(open('./model.p', 'rb'))
 model = model_dict['model']
 
@@ -42,7 +42,6 @@ total = 0
 
 # Initialize the webcam, if not working properly, try changing 
 # the constant to 0, 1, or 2
-# 웹캠을 실행시킵니다. 만약 열리지 않는다면 숫자를 0, 1, 혹은 2로 바꿔주세요
 cap = cv2.VideoCapture(1)
 
 def get_random_alphabet():
@@ -154,7 +153,6 @@ while True:
 
 
         # Check if the user made the correct gesture
-        # 사용자가 맞는 수어를 보였는지 확인합니다
         if predicted_character == current_alphabet and not correct_answer_displayed:
             show_start_message = False
             correct_answer_displayed = True
@@ -167,7 +165,6 @@ while True:
             total += 1
 
         # Display "Correct!" message for 3 seconds
-        # 정답 시 정답이라는 문구를 3초간 보여줍니다
         if correct_answer_displayed:
             text = "Correct!"
             font = cv2.FONT_HERSHEY_SIMPLEX
@@ -178,7 +175,6 @@ while True:
             cv2.putText(frame, text, position, font, font_scale, font_color, thickness)
 
         # Display the next question after 3 seconds
-        # 3초 뒤에 다음 문제로 넘어갑니다
         if time.time() - next_question_time >= 3:
             text = "Sign " + current_alphabet + "."
         
@@ -193,7 +189,6 @@ while True:
         # cv2.imshow("Webcam", frame)
 
         # Break the loop if the 'q' key is pressed
-        # q를 누를 시 프로그램을 종료하고 정답률을 보고합니다
         if cv2.waitKey(1) & 0xFF == ord('q'):
             correct = total - len(skipped)
             percentage = (correct / total) * 100
