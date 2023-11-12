@@ -12,31 +12,19 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @Getter
 @Setter
-@Table(name = "Indy")
-public class Indy {
+@Table(name = "alphabet")
+public class Alphabet extends Category {
+
     @Id
-    @NotEmpty
-    private String Id;
+    @NotNull
+    private long wordId;
 
     @NotNull
-    private String Spec;
-    @NotNull
-    private String Indus;
-    @NotNull
-    private String Certifications;
-    @NotNull
-    private String Degree;
-    @NotNull
-    private String Sim_degree;
-    @NotNull
-    private String Job_name;
-    @NotNull
-    private String Job_salary;
-    @NotNull
-    private String Skills;
+    private String word;
 
-//    public Indy(String code, int capacity){
-//        this.Id = code;
-//        this.capacity = capacity;
-//    }
+    @NotNull
+    private String imageURL;
+
+    
+
 }

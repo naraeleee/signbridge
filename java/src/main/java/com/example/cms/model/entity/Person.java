@@ -19,10 +19,7 @@ public abstract class Person {
     private long id;
 
     @NotEmpty
-    private String firstName;
-
-    @NotEmpty
-    private String lastName;
+    private String name;
 
     @Email
     @NotEmpty
