@@ -7,7 +7,7 @@ At the heart of Sign Bridge is an innovative, real-time Sign Language Recognitio
 
 But that's not all. Sign Bridge also doubles as a translator, bridging the gap between spoken and sign language. Whether you're learning ASL, teaching it, or just want to communicate more effectively with the deaf community, Sign Bridge is your go-to tool. It's more than just an app – it's a step towards a more inclusive world.
 
-<img width="1253" alt="image" src="https://github.com/naraeleee/signbridge/assets/113263597/72944d45-0240-42fa-825c-c893c734dda5">
+
 
 
 ![image](https://github.com/naraeleee/signbridge/assets/113263597/4f034bf7-9824-415a-a6f5-7ba15f779a11)
